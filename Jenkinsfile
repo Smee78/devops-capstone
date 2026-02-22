@@ -4,6 +4,7 @@ pipeline {
   stages {
     stage('Clone') {
       steps {
+        git branch: 'main', url: ''
         echo "code done"
       }
     }
