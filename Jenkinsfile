@@ -4,15 +4,14 @@ pipeline {
   stages {
     stage('Clone') {
       steps {
-        git branch: 'main', url: 'https://github.com/abhijeetgowari/devops-capstone.git'
+        git branch: 'main', url: 'https://github.com/Smee78/devops-capstone.git'
         echo "code done"
       }
     }
 
     stage('Build Docker Image') {
       steps {
-      sh 'docker build -t node-app-image:v1 .'
-      sh 'docker run -d -p 5055:5050 node-app-image:v1'
+      sh 'docker build -t node-app .'
         echo "Build Docker Done"
       }
     }
