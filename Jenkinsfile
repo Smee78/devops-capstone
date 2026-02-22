@@ -11,7 +11,6 @@ pipeline {
 
     stage('Build Docker Image') {
       steps {
-      sh 'docker build -t node-app .'
         echo "Build Docker Done"
       }
     }
