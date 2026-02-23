@@ -11,7 +11,7 @@ pipeline {
 
     stage('Build Docker Image') {
       steps {
-        sh 'docker built -t node-app'
+        sh 'docker built -t smee778/node-app .'
         echo "Build Docker image Done"
       }
     }
