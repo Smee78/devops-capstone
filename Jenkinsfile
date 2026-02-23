@@ -11,6 +11,7 @@ pipeline {
 
     stage('Build Docker Image') {
       steps {
+        
         sh 'docker build -t smee778/node-app:latest .'
         echo "Build Docker image Done"
       }
@@ -18,6 +19,7 @@ pipeline {
 
     stage('Deploy to K8s') {
       steps {
+        
         sh 'kubectl apply -f deployment.yaml'
         sh 'kubectl apply -f service.yaml'
          echo "Deploy done"
