@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Clone') {
       steps {
-        git branch: 'main', url: ''
+        git branch: 'main', url: 'https://github.com/Smee78/devops-capstone.git'
         echo "code done"
       }
     }
