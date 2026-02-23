@@ -16,5 +16,4 @@ spec:
         - name: node-app
           image: smee778/node-app
           ports:
-            - containerPort: 5000
-~                                     
+            - containerPort: 5000                                 
