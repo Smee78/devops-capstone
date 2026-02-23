@@ -19,10 +19,11 @@ pipeline {
 
     stage('Deploy to K8s') {
       steps {
-        
+        withKubeConfig([credentialsId:'my-kubeconfig-id']){
         sh 'kubectl apply -f deployment.yaml'
         sh 'kubectl apply -f service.yaml'
          echo "Deploy done"
+        }
       }
     }
   }
